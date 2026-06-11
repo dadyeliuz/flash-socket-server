@@ -1,0 +1,27 @@
+{
+  "name": "@flash-socket-server/cli",
+  "version": "1.0.0",
+  "description": "Unified Command Line Interface and launcher runner",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/main.ts",
+    "doctor": "ts-node src/doctor.ts",
+    "compat-matrix": "ts-node src/compatMatrix.ts"
+  },
+  "dependencies": {
+    "@flash-socket-server/asset-indexer": "1.0.0",
+    "@flash-socket-server/compat-doctor": "1.0.0",
+    "@flash-socket-server/compat-matrix": "1.0.0",
+    "@flash-socket-server/core": "1.0.0",
+    "@flash-socket-server/flash-policy": "1.0.0",
+    "@flash-socket-server/http-gateway": "1.0.0",
+    "@flash-socket-server/runtime-adapters": "1.0.0",
+    "@flash-socket-server/sfs-emulator": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "ts-node": "^10.9.2"
+  }
+}

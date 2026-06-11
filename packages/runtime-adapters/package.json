@@ -1,0 +1,17 @@
+{
+  "name": "@flash-socket-server/runtime-adapters",
+  "version": "1.0.0",
+  "description": "Clean-room preservation runtime environment adapters",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@flash-socket-server/core": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2"
+  }
+}

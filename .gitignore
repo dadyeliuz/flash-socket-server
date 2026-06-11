@@ -1,0 +1,83 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Compiled files
+dist/
+build/
+*.tsbuildinfo
+
+# Local Environment / Config Files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.local.yml
+*.local.yaml
+server.yml
+server.yaml
+config.yml
+config.yaml
+tools/runtime/ruffle/*
+!tools/runtime/ruffle/.gitkeep
+!tools/runtime/ruffle/README.md
+
+# Clean-Room Asset Guard (Strictly forbidden committed file formats)
+*.swf
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Media & Client Assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.mp3
+*.wav
+*.ogg
+*.flv
+*.swf
+*.as
+
+# XML files (often contain proprietary configurations/chat scripts)
+*.xml
+
+# Exclude documentation XMLs if any, but default to block all to prevent accidental client configuration commits.
+!docs/**/*.xml
+!package.json
+!tsconfig.json
+!tsconfig.base.json
+!pnpm-workspace.yaml
+!pnpm-lock.yaml
+
+# IDEs & System
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# broken/local runtime snapshots
+tools/runtime/ruffle-BROKEN-SNAPSHOT-*/
+tools/runtime/**/*.wasm
+tools/runtime/**/*.map
+tools/runtime/ruffle/core.ruffle.*.js

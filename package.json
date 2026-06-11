@@ -1,0 +1,25 @@
+{
+  "name": "flash-socket-server-monorepo",
+  "version": "1.0.0",
+  "description": "Clean-room preservation runtime for legacy Flash MMOs",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/validate-cleanliness.js && npm run dev --workspace=@flash-socket-server/cli",
+    "build": "node scripts/validate-cleanliness.js && npm run build --workspace=@flash-socket-server/core && npm run build --workspace=@flash-socket-server/asset-indexer && npm run build --workspace=@flash-socket-server/compat-doctor && npm run build --workspace=@flash-socket-server/compat-matrix && npm run build --workspace=@flash-socket-server/flash-policy && npm run build --workspace=@flash-socket-server/sfs-emulator && npm run build --workspace=@flash-socket-server/http-gateway && npm run build --workspace=@flash-socket-server/runtime-adapters && npm run build --workspace=@flash-socket-server/cli",
+    "doctor": "npm run doctor --workspace=@flash-socket-server/cli --",
+    "compat-matrix": "npm run compat-matrix --workspace=@flash-socket-server/cli --",
+    "setup:ruffle": "node scripts/setup-ruffle-runtime.js",
+    "clean:ruffle": "node scripts/clean-ruffle-runtime.js",
+    "verify:ruffle-runtime": "node scripts/verify-ruffle-runtime-patches.js",
+    "test": "vitest run",
+    "validate-clean": "node scripts/validate-cleanliness.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}

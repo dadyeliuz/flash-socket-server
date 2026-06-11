@@ -1,0 +1,19 @@
+{
+  "name": "@flash-socket-server/core",
+  "version": "1.0.0",
+  "description": "Core configurations and utilities for Flash Socket Server",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.2"
+  }
+}

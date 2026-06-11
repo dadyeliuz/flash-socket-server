@@ -1,0 +1,18 @@
+{
+  "name": "@flash-socket-server/compat-matrix",
+  "version": "1.0.0",
+  "description": "Compatibility matrix and pairing engine for candidate client SWF versions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@flash-socket-server/core": "1.0.0",
+    "@flash-socket-server/asset-indexer": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2"
+  }
+}

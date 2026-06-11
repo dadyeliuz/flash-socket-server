@@ -1,0 +1,43 @@
+# ==============================================================================
+#           FLASH SOCKET PRESERVATION SERVER CONFIGURATION EXAMPLE
+# ==============================================================================
+# Rename this file to 'server.yml' in the root directory to activate it locally.
+
+# Port for the Fastify HTTP gateway (serves /play.html, assets, configs)
+httpPort: 8080
+
+# Port for the TCP socket emulator (SmartFoxServer compatibility)
+socketPort: 9339
+
+# Port for the Flash Socket Policy Server (optional, falls back gracefully)
+policyPort: 843
+
+# REQUIRED: Absolute path to the user-supplied assets directory
+# Place your legal Flash client game files here.
+assetsPath: "C:\\PROJ\\sfs-emu\\CLINET-CLEAN"
+
+# Primary delivery container mechanism. 
+# Options: 'web-container', 'projector', 'ruffle', 'ruffle-local'
+# - 'web-container' (default) serves a browser wrapper. Strongly recommended.
+# - 'projector' runs standalone Flash projector but lacks ExternalInterface.
+# - 'ruffle' aliases the experimental localhost-only Ruffle adapter.
+# - 'ruffle-local' serves the experimental local WebAssembly player emulator.
+runtimeMode: "web-container"
+
+# Configurable entrypoint Flash animation/application SWF file
+# Default is 'Login.swf' which gets embedded inside play.html
+entrySwf: "Login.swf"
+
+# Configurable Host value served inside Servers.aspx fallback XML mapping
+publicHost: "127.0.0.1"
+
+# Runtime-only alias mapping for login graphics.
+# When a clean graphics library (e.g. loginGR.swf) lacks vital compiled methods
+# (like getSwfParams or mlLoginMultiUsers), specify a compatible graphics library file 
+# (e.g., "BaseLoginGR.swf") to be dynamically served instead.
+# If null, no aliasing is applied.
+compatLoginGraphicsAlias: null
+
+# Experimental: Whether to send the SmartFox custom extension login payload
+# (ld/LoadingScreens list) immediately following the standard XML logOK message.
+sendLoginExtensionAfterLogOk: false
