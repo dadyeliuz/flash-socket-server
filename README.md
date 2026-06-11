@@ -24,7 +24,7 @@ pnpm install
 ```
 
 ### 2. Prepare Your Local Assets Folder
-Create an external assets folder on your local system (e.g. `C:\PROJ\sfs-emu\assets`) and copy your legally obtained Flash client assets there.
+Create an external assets folder on your local system (e.g. `C:\flash-socket-server\assets`) and copy your legally obtained Flash client assets there.
 
 ---
 
@@ -33,7 +33,7 @@ Create an external assets folder on your local system (e.g. `C:\PROJ\sfs-emu\ass
 Start the unified HTTP, TCP game socket, and optional policy servers in watch/development mode:
 
 ```bash
-pnpm dev -- --assets "C:\PROJ\sfs-emu\CLINET-CLEAN"
+pnpm dev -- --assets "C:\flash-socket-server\assets"
 ```
 
 ### Options
