@@ -24,7 +24,7 @@ pnpm install
 ```
 
 ### 2. Prepare Your Local Assets Folder
-Create an external assets folder on your local system (e.g. `C:\PROJ\sfs-emu\CLINET-CLEAN`) and copy your legally obtained Flash client assets there.
+Create an external assets folder on your local system (e.g. `C:\PROJ\sfs-emu\assets`) and copy your legally obtained Flash client assets there.
 
 ---
 
